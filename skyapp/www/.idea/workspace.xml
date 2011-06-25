@@ -27,7 +27,16 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="39" selection-start="3178" selection-end="3178" vertical-scroll-proportion="0.41161928">
+            <state line="125" column="76" selection-start="4271" selection-end="4271" vertical-scroll-proportion="0.55871445">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="maps.google.polygon.containsLatLng.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/maps.google.polygon.containsLatLng.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -69,6 +78,7 @@
         <option value="$PROJECT_DIR$/../../android/assets/www/index.html" />
         <option value="$PROJECT_DIR$/circlecalculation.html" />
         <option value="$PROJECT_DIR$/poscalculation.js" />
+        <option value="$PROJECT_DIR$/maps.google.polygon.containsLatLng.js" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -142,6 +152,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/images" />
     </key>
   </component>
@@ -267,9 +278,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/maps.google.polygon.containsLatLng.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="39" selection-start="3178" selection-end="3178" vertical-scroll-proportion="0.41161928">
+        <state line="125" column="76" selection-start="4271" selection-end="4271" vertical-scroll-proportion="0.55871445">
           <folding />
         </state>
       </provider>

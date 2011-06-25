@@ -283,7 +283,7 @@
 		<string>DVTIdentifier</string>
 		<string>DVTViewMagnitude</string>
 		<string></string>
-		<real>652</real>
+		<real>393</real>
 		<dict>
 			<key>$classes</key>
 			<array>
@@ -796,7 +796,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>1140</real>
+		<real>831</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -1351,7 +1351,7 @@
 			</array>
 		</dict>
 		<string>VariablesView</string>
-		<real>298</real>
+		<real>250</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -1382,7 +1382,7 @@
 			</array>
 		</dict>
 		<string>ConsoleArea</string>
-		<real>841</real>
+		<real>580</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -1451,7 +1451,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>298</real>
+		<real>250</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -1481,7 +1481,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>841</real>
+		<real>580</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -1792,8 +1792,8 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>330709921.02989101</real>
-		<string>{16, 1686}</string>
+		<real>330713515.276142</real>
+		<string>{136, 1246}</string>
 		<string>{952, 0}</string>
 		<string>Xcode.IDEKit.EditorDocument.SourceCode</string>
 		<dict>
@@ -1837,7 +1837,7 @@
 				</dict>
 			</array>
 		</dict>
-		<string>{{0, 0}, {1140, 739}}</string>
+		<string>{{0, 0}, {831, 480}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -1907,7 +1907,7 @@
 			</array>
 		</dict>
 		<string>IDEEditor</string>
-		<real>761</real>
+		<real>502</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -1964,7 +1964,7 @@
 				</dict>
 			</array>
 		</dict>
-		<string>{{51, 68}, {1400, 952}}</string>
+		<string>{{142, 319}, {1091, 693}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -5198,7 +5198,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>452</integer>
+					<integer>453</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -5441,7 +5441,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>970</real>
+		<real>661</real>
 		<string>Xcode3TargetEditor</string>
 		<dict>
 			<key>$class</key>
@@ -5480,7 +5480,7 @@
 			</dict>
 		</dict>
 		<string>file://localhost/Users/jocranford/iphone/skyapp/skyapp.xcodeproj/</string>
-		<real>330709916.05470198</real>
+		<real>330713510.313236</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -5677,8 +5677,8 @@
 				</dict>
 			</array>
 		</dict>
-		<real>330709921.027731</real>
-		<string>{16, 1686}</string>
+		<real>330713515.27408999</real>
+		<string>{136, 1246}</string>
 		<string>{952, 0}</string>
 		<dict>
 			<key>$class</key>
@@ -5854,7 +5854,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>432</integer>
+					<integer>452</integer>
 				</dict>
 			</array>
 		</dict>
@@ -6118,7 +6118,7 @@
 				<integer>449</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>330709853.42842698</real>
+			<real>330713467.119923</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -6129,8 +6129,9 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 16:50</string>
+		<string>Today at 17:51</string>
 		<integer>106</integer>
+		<string>skyapp</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -6141,11 +6142,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>453</integer>
+					<integer>454</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>455</integer>
+					<integer>456</integer>
 				</dict>
 			</array>
 		</dict>
@@ -6163,7 +6164,7 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>454</integer>
+				<integer>455</integer>
 			</dict>
 		</dict>
 		<string>file://localhost/Users/jocranford/iphone/skyapp/www/index.html</string>
