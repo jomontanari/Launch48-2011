@@ -1792,7 +1792,7 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>330699228.22618401</real>
+		<real>330700499.177899</real>
 		<string>{16, 1729}</string>
 		<string>{952, 0}</string>
 		<string>Xcode.IDEKit.EditorDocument.SourceCode</string>
@@ -5198,7 +5198,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>452</integer>
+					<integer>453</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -5480,7 +5480,7 @@
 			</dict>
 		</dict>
 		<string>file://localhost/Users/jocranford/iphone/skyapp/skyapp.xcodeproj/</string>
-		<real>330699223.23219401</real>
+		<real>330700494.19143897</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -5677,7 +5677,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>330699228.224338</real>
+		<real>330700499.17571598</real>
 		<string>{16, 1729}</string>
 		<string>{952, 0}</string>
 		<dict>
@@ -5854,7 +5854,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>432</integer>
+					<integer>452</integer>
 				</dict>
 			</array>
 		</dict>
@@ -6118,7 +6118,7 @@
 				<integer>449</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>330699003.20650399</real>
+			<real>330700333.69415498</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -6129,8 +6129,9 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 13:50</string>
+		<string>Today at 14:12</string>
 		<integer>106</integer>
+		<string>skyapp</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -6141,11 +6142,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>453</integer>
+					<integer>454</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>455</integer>
+					<integer>456</integer>
 				</dict>
 			</array>
 		</dict>
@@ -6163,7 +6164,7 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>454</integer>
+				<integer>455</integer>
 			</dict>
 		</dict>
 		<string>file://localhost/Users/jocranford/iphone/skyapp/www/index.html</string>

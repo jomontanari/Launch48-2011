@@ -75,6 +75,8 @@
 
     <script type="text/javascript">
 
+        var mapLoaded = false;
+
          function getAgentLocations() {
             $.ajax({
                 url: "http://scubaholic.co.uk/agents.php?callback=?",
@@ -85,25 +87,29 @@
         }
 
         $('#gmap-4').live("pageshow", function() {
+            if (!mapLoaded) {
 
-            if (navigator.geolocation) {
-                watch = navigator.geolocation.watchPosition(
-                    function(position) {
+                if (navigator.geolocation) {
+                    watch = navigator.geolocation.watchPosition(
+                        function(position) {
 
-                        var pos = getLatLng(position);
+                            var pos = getLatLng(position);
 
-                        $('#map_canvas_2').gmap({ 'center': pos,'zoom': 14, 'streetViewControl': false, 'mapTypeControl': false, 'navigationControl': false, 'callback': function (map) {
-                            $('#map_canvas_2').gmap('clearMarkers');
-                            $('#map_canvas_2').gmap('addMarker', { 'bound': true, animation: google.maps.Animation.DROP, 'position':new google.maps.LatLng(position.coords.latitude, position.coords.longitude) }, function(map, marker) {
-                                map.panTo(marker.getPosition());
-                                getAgentLocations();
+                            $('#map_canvas_2').gmap({ 'center': pos,'zoom': 14, 'streetViewControl': false, 'mapTypeControl': false, 'navigationControl': false, 'callback': function (map) {
+                                $('#map_canvas_2').gmap('clearMarkers');
+                                $('#map_canvas_2').gmap('addMarker', { 'bound': true, icon: 'images/me.png', 'position':new google.maps.LatLng(position.coords.latitude, position.coords.longitude) }, function(map, marker) {
+                                    map.panTo(marker.getPosition());
+                                    getAgentLocations();
+                                });
+                            }
                             });
                         }
-                        });
-                    }
-                )
-            }
+                    )
 
+                    mapLoaded = true;
+                }
+
+            }
             function getLatLng(position) {
                 return new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
             }
@@ -124,12 +130,10 @@
 
         function loadAgents(data) {
             $.each(data, function(key, value) {
-               $('#map_canvas_2').gmap('addMarker', { 'title': value.id, 'bound': true, animation: google.maps.Animation.DROP, 'position':new google.maps.LatLng(value.position.lat, value.position.lng) }, function(map, marker) {
+                var icon = (value.status === "friend") ? "friend" : "enemy";
+               $('#map_canvas_2').gmap('addMarker', { 'title': value.id, 'bound': true, icon: 'images/' + icon + '.png', 'position':new google.maps.LatLng(value.position.lat, value.position.lng) }, function(map, marker) {
                     $(marker).click(function() {
-                        $(marker).click(function() {
-                            $("#hit").removeClass("hidden").addClass("visible");
-                        });
-                        
+                        $("#hit").removeClass("hidden").addClass("visible");
                     });
                     map.panTo(marker.getPosition());
                });
@@ -147,7 +151,7 @@
 
         <div class="hidden popup" id="hit">
 
-            <h5>Hello World</h5>
+            <h5>POW!</h5>
 
             <a href="javascript:void(0)" id="close">Close</a>
     </div>
