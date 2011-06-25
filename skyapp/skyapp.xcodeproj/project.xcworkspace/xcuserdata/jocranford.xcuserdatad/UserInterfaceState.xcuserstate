@@ -1792,8 +1792,8 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>330697360.58136398</real>
-		<string>{252, 1638}</string>
+		<real>330698389.13018799</real>
+		<string>{16, 1839}</string>
 		<string>{952, 0}</string>
 		<string>Xcode.IDEKit.EditorDocument.SourceCode</string>
 		<dict>
@@ -5198,7 +5198,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>453</integer>
+					<integer>452</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -5480,7 +5480,7 @@
 			</dict>
 		</dict>
 		<string>file://localhost/Users/jocranford/iphone/skyapp/skyapp.xcodeproj/</string>
-		<real>330697355.58908302</real>
+		<real>330698384.14040399</real>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -5677,8 +5677,8 @@
 				</dict>
 			</array>
 		</dict>
-		<real>330697360.57955498</real>
-		<string>{252, 1638}</string>
+		<real>330698389.12825203</real>
+		<string>{16, 1839}</string>
 		<string>{952, 0}</string>
 		<dict>
 			<key>$class</key>
@@ -5854,7 +5854,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>452</integer>
+					<integer>432</integer>
 				</dict>
 			</array>
 		</dict>
@@ -6118,7 +6118,7 @@
 				<integer>449</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>330697010.72273803</real>
+			<real>330697661.999816</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -6129,9 +6129,8 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 13:16</string>
+		<string>Today at 13:27</string>
 		<integer>106</integer>
-		<string>skyapp</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -6142,11 +6141,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>454</integer>
+					<integer>453</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>456</integer>
+					<integer>455</integer>
 				</dict>
 			</array>
 		</dict>
@@ -6164,7 +6163,7 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>455</integer>
+				<integer>454</integer>
 			</dict>
 		</dict>
 		<string>file://localhost/Users/jocranford/iphone/skyapp/www/index.html</string>

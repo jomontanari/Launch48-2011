@@ -91,11 +91,6 @@
                         $('#map_canvas_2').gmap({ 'center': pos,'zoom': 14, 'streetViewControl': false, 'mapTypeControl': false, 'navigationControl': false, 'callback': function (map) {
                             $('#map_canvas_2').gmap('clearMarkers');
                             $('#map_canvas_2').gmap('addMarker', { 'bound': true, animation: google.maps.Animation.DROP, 'position':new google.maps.LatLng(position.coords.latitude, position.coords.longitude) }, function(map, marker) {
-                                $('#map_canvas_2').gmap('addInfoWindow', { 'position': marker.getPosition(), 'content': 'You are here!' }, function(iw) {
-                                    $(marker).click(function() {
-                                        iw.open(map, marker);
-                                    });
-                                });
                                 map.panTo(marker.getPosition());
                                 getAgentLocations();
                             });
@@ -127,7 +122,10 @@
             $.each(data, function(key, value) {
                $('#map_canvas_2').gmap('addMarker', { 'title': value.id, 'bound': true, animation: google.maps.Animation.DROP, 'position':new google.maps.LatLng(value.position.lat, value.position.lng) }, function(map, marker) {
                     $(marker).click(function() {
-                        $('#hit').addClass("visible");
+                        $(marker).click(function() {
+                            $("#hit").removeClass("hidden").addClass("visible");
+                        });
+                        
                     });
                     map.panTo(marker.getPosition());
                });
@@ -138,7 +136,7 @@
     </script>
     <div class="page" data-role="content">
 
-            <div id="map_canvas_2" style="height:450px;"></div>
+        <div id="map_canvas_2" style="height:450px;"></div>
 
         <div class="hidden popup" id="hit">
 

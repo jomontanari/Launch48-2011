@@ -27,16 +27,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="47" selection-start="1661" selection-end="1661" vertical-scroll-proportion="0.7564895">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../android/assets/www/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="40" selection-start="2052" selection-end="2052" vertical-scroll-proportion="-10.607843">
+            <state line="10" column="0" selection-start="478" selection-end="478" vertical-scroll-proportion="0.21013597">
               <folding />
             </state>
           </provider>
@@ -46,15 +37,6 @@
         <entry file="file://$PROJECT_DIR$/ui/jquery.ui.map.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="148" column="51" selection-start="4506" selection-end="4524" vertical-scroll-proportion="-23.576923">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.mobile-1.0a4.min.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jquery.mobile-1.0a4.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="21903" selection-start="22267" selection-end="22267" vertical-scroll-proportion="-9.807693">
               <folding />
             </state>
           </provider>
@@ -234,23 +216,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/jquery.mobile-1.0a4.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="21903" selection-start="22267" selection-end="22267" vertical-scroll-proportion="-9.807693">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ui/jquery.ui.map.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="148" column="51" selection-start="4506" selection-end="4524" vertical-scroll-proportion="-23.576923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../android/assets/www/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="40" selection-start="2052" selection-end="2052" vertical-scroll-proportion="-10.607843">
           <folding />
         </state>
       </provider>
@@ -262,9 +230,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../android/assets/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="29" selection-start="1496" selection-end="1496" vertical-scroll-proportion="-1.0333745">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="47" selection-start="1661" selection-end="1661" vertical-scroll-proportion="0.7564895">
+        <state line="10" column="0" selection-start="478" selection-end="478" vertical-scroll-proportion="0.21013597">
           <folding />
         </state>
       </provider>
