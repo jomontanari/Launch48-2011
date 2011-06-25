@@ -20,6 +20,8 @@
     <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="jquery-ui-1.8.13.min.js"></script>
     <script type="text/javascript" src="ui/jquery.ui.map.js"></script>
+    <script type="text/javascript" src="poscalculation.js"></script>
+
 
     <style rel="stylesheet">
         body {
@@ -78,6 +80,8 @@
     <script type="text/javascript">
 
         var mapLoaded = false;
+        var myPosition = null;
+        var mainMap = null;
 
          function getAgentLocations() {
             $.ajax({
@@ -88,16 +92,37 @@
             });
         }
 
+        function drawTargetArea() {
+            console.log(myPosition);
+            var pos1 = getNextLatLon(myPosition.lat(), myPosition.lng(), 0);
+            var pos2 = getNextLatLon(myPosition.lat(), myPosition.lng(), 30);
+            var triangleCoords = [
+                myPosition,
+                new google.maps.LatLng(pos1.latitude, pos1.longitude),
+                new google.maps.LatLng(pos2.latitude, pos2.longitude)
+            ];
+            targetArea = new google.maps.Polygon({
+                paths: triangleCoords,
+                strokeColor: "#FF0000",
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: "#FF0000",
+                fillOpacity: 0.35
+            });
+            targetArea.setMap(mainMap);
+
+        }
+
         $('#gmap-4').live("pageshow", function() {
             if (!mapLoaded) {
 
                 if (navigator.geolocation) {
                     watch = navigator.geolocation.watchPosition(
                         function(position) {
+                            myPosition = getLatLng(position);
 
-                            var pos = getLatLng(position);
-
-                            $('#map_canvas_2').gmap({ 'center': pos,'zoom': 14, 'streetViewControl': false, 'mapTypeControl': false, 'navigationControl': false, 'callback': function (map) {
+                            $('#map_canvas_2').gmap({ 'center': myPosition,'zoom': 14, 'streetViewControl': false, 'mapTypeControl': false, 'navigationControl': false, 'callback': function (map) {
+                                mainMap = map;
                                 $('#map_canvas_2').gmap('clearMarkers');
                                 $('#map_canvas_2').gmap('addMarker', { 'bound': true, icon: 'images/me.png', 'position':new google.maps.LatLng(position.coords.latitude, position.coords.longitude) }, function(map, marker) {
                                     map.panTo(marker.getPosition());
@@ -112,12 +137,12 @@
                 }
 
             }
-            function getLatLng(position) {
-                return new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-            }
-
 
         });
+
+        function getLatLng(position) {
+            return new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+        }
 
         $('#gmap-4').live("pagehide", function() {
             if (navigator.geolocation) {
@@ -135,7 +160,8 @@
                 var icon = (value.status === "friend") ? "friend" : "enemy";
                $('#map_canvas_2').gmap('addMarker', { 'title': value.id, 'bound': true, icon: 'images/' + icon + '.png', 'position':new google.maps.LatLng(value.position.lat, value.position.lng) }, function(map, marker) {
                     $(marker).click(function() {
-                        $("#hit").removeClass("hidden").addClass("visible");
+                        drawTargetArea();
+                        //$("#hit").removeClass("hidden").addClass("visible");
                     });
                     map.panTo(marker.getPosition());
                });

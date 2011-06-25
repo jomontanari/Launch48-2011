@@ -27,7 +27,16 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="153" column="20" selection-start="5162" selection-end="5162" vertical-scroll-proportion="0.3275649">
+            <state line="100" column="39" selection-start="3178" selection-end="3178" vertical-scroll-proportion="0.41161928">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="poscalculation.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/poscalculation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="22" selection-start="1144" selection-end="1144" vertical-scroll-proportion="-5.8235292">
               <folding />
             </state>
           </provider>
@@ -36,7 +45,7 @@
       <file leaf-file-name="jquery.ui.map.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/jquery.ui.map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="148" column="51" selection-start="4506" selection-end="4524" vertical-scroll-proportion="-23.576923">
+            <state line="151" column="45" selection-start="4684" selection-end="4685" vertical-scroll-proportion="-25.538462">
               <folding />
             </state>
           </provider>
@@ -58,6 +67,8 @@
       <list>
         <option value="$PROJECT_DIR$/jquery.mobile-1.0a4.min.css" />
         <option value="$PROJECT_DIR$/../../android/assets/www/index.html" />
+        <option value="$PROJECT_DIR$/circlecalculation.html" />
+        <option value="$PROJECT_DIR$/poscalculation.js" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -118,20 +129,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -235,13 +232,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ui/jquery.ui.map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="51" selection-start="4506" selection-end="4524" vertical-scroll-proportion="-23.576923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -256,9 +246,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/ECMAScript.js2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="150" column="32" selection-start="6557" selection-end="6557" vertical-scroll-proportion="0.33255813">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/jquery.ui.map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="151" column="45" selection-start="4684" selection-end="4685" vertical-scroll-proportion="-25.538462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poscalculation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="22" selection-start="1144" selection-end="1144" vertical-scroll-proportion="-5.8235292">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="20" selection-start="5162" selection-end="5162" vertical-scroll-proportion="0.3275649">
+        <state line="100" column="39" selection-start="3178" selection-end="3178" vertical-scroll-proportion="0.41161928">
           <folding />
         </state>
       </provider>
