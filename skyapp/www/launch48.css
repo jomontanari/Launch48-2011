@@ -29,7 +29,6 @@ float:left;
 position:relative;
 width:320pt;
 padding:10px;
-border:2px dotted black;
 }
 
 #gmap-4{
@@ -79,4 +78,8 @@ padding:40px;
 background:#ffffff;
 border:5px solid #000;
 z-index:30;
+}
+
+.weapon-select form .guns radio{
+float:left;
 }
