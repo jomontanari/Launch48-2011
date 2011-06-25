@@ -15,9 +15,14 @@
     <meta name="DC.language" content="en"/>
 
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a4/jquery.mobile-1.0a4.min.css"/>
+    <link rel="stylesheet" href="launch48.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Permanent+Marker&v1' rel='stylesheet' type='text/css'>
     <style rel="stylesheet">
+    
         body {
             background: #ddd;
+            font-family:'Permanent Marker', arial, serif;
+            color:#000;
         }
 
         .ui-body-c a.ui-link {
@@ -55,15 +60,39 @@
     </script>
     <script type="text/javascript" src="http://code.jquery.com/mobile/1.0a4/jquery.mobile-1.0a4.min.js"></script>
     <script type="text/javascript" src="ui/jquery.ui.map.js"></script>
+    <script type="text/javascript" src="ui/jquery-ui-1.8.13.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $(".agent a").click(function(){
+                $(".popup").show();
+            })
+        })
+    </script>
 </head>
 
 <body>
 
 <div id="gmap-4" class="" data-role="page">
-
-    <div data-role="header">
-        <h1><a data-ajax="false" href="/">jQuery mobile with Google maps</a> geo search</h1>
+    
+    <div class="agent">
+        
+        <a href="#"></a>
+        
     </div>
+    
+    <div class="hidden popup">
+        
+            <h5>Hello World</h5>
+            
+            <form>
+                <fieldset>
+                    <label class="hidden" for="">Close</label>
+                    <button type="submit">close</a>
+                </fieldset>
+            </form>
+            
+    </div><!--end popup-->
 
     <script type="text/javascript">
         $('#gmap-4').live("pageshow", function() {
@@ -114,18 +143,9 @@
             <div id="map_canvas_2" style="height:300px;"></div>
         </div>
 
-        <h2>More Google maps and jQuery examples</h2>
-
-
     </div>
+    
 
-    <div data-role="footer" data-theme="a">
-        <h3>Need help?</h3>
-
-        <p class="more">Please feel free to ask for help in the <a data-ajax="false"
-                                                                   href="http://groups.google.com/group/jquery-ui-map-discuss">forum</a>
-        </p>
-    </div>
 
     <div id="ft" class="hidden" itemscope itemtype="http://data-vocabulary.org/Person">
         Author:
