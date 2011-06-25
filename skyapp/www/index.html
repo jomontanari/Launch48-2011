@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Spy App</title>
+    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+    <meta name="keywords" content="Google maps, jQuery, plugin, mobile, iphone, ipad, android, HTML5, Geo search"/>
+    <meta name="description" content="Geo search example with jQuery mobile, Google maps and HTML5"/>
+    <meta http-equiv="content-language" content="en"/>
+
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+
+    <link rel="stylesheet" href="jquery.mobile-1.0a4.min.css"/>
+    <style rel="stylesheet">
+        body {
+            background: #ddd;
+        }
+
+        .ui-body-c a.ui-link {
+            color: #008595;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        h2 {
+            font-size: 16px;
+            overflow: hidden;
+            white-space: nowrap;
+            display: block;
+        }
+
+        .more {
+            text-align: center;
+        }
+    </style>
+    <script src="http://www.google.com/jsapi?key=ABQIAAAAahcO7noe62FuOIQacCQQ7RTHkUDJMJAZieEeKAqNDtpKxMhoFxQsdtJdv3FJ1dT3WugUNJb7xD-jsQ" type="text/javascript"></script>
+    <script type="text/javascript">
+        google.load("maps", "3", {'other_params':'sensor=true'});
+        google.load("jquery", "1.5");
+    </script>
+    <script type="text/javascript">
+        // Demonstration purpose only...
+        $(document).bind("mobileinit", function () {
+            $.mobile.ajaxEnabled = true;
+        });
+    </script>
+    <script type="text/javascript" src="jquery.mobile-1.0a4.min.js"></script>
+    <script type="text/javascript" src="ui/jquery.ui.map.js"></script>
+</head>
+
+<body>
+
+<div id="gmap-4" class="" data-role="page">
+
+    <div data-role="header">
+        <h1>Targets Near You!</h1>
+    </div>
+
+    <script type="text/javascript">
+
+         function getAgentLocations() {
+            $.ajax({
+                url: "http://scubaholic.co.uk/agents.php?callback=?",
+                dataType: 'json',
+                success: loadAgents,
+                error: function() {alert("Error")}
+            });
+        }
+
+        $('#gmap-4').live("pageshow", function() {
+
+            if (navigator.geolocation) {
+                watch = navigator.geolocation.watchPosition(
+                    function(position) {
+
+                        var pos = getLatLng(position);
+
+                        $('#map_canvas_2').gmap({ 'center': pos,'zoom': 14, 'streetViewControl': false, 'mapTypeControl': false, 'navigationControl': false, 'callback': function (map) {
+                            $('#map_canvas_2').gmap('clearMarkers');
+                            $('#map_canvas_2').gmap('addMarker', { 'bound': true, 'position':new google.maps.LatLng(position.coords.latitude, position.coords.longitude) }, function(map, marker) {
+                                $('#map_canvas_2').gmap('addInfoWindow', { 'position': marker.getPosition(), 'content': 'You are here!' }, function(iw) {
+                                    $(marker).click(function() {
+                                        iw.open(map, marker);
+                                    });
+                                });
+                                map.panTo(marker.getPosition());
+                                getAgentLocations();
+                            });
+                        }
+                        });
+                    }
+                )
+            }
+
+            function getLatLng(position) {
+                return new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+            }
+
+
+        });
+
+        $('#gmap-4').live("pagehide", function() {
+            if (navigator.geolocation) {
+                navigator.geolocation.clearWatch(watch);
+            }
+        });
+
+        $('#gmap-4').live("pagecreate", function() {
+            var watch;
+        });
+
+
+        function loadAgents(data) {
+            $.each(data, function(key, value) {
+               $('#map_canvas_2').gmap('addMarker', { 'title': value.id, 'bound': true, 'position':new google.maps.LatLng(value.position.lat, value.position.lng) }, function(map, marker) {
+                $('#map_canvas_2').gmap('addInfoWindow', { 'position': marker.getPosition(), 'content': 'This is ' + value.id }, function(iw) {
+                    $(marker).click(function() {
+                        iw.open(map, marker);
+                    });
+                });
+                map.panTo(marker.getPosition());
+            });
+            });
+        }
+
+        
+    </script>
+    <div class="page" data-role="content">
+
+            <div id="map_canvas_2" style="height:450px;"></div>
+
+    </div>
+
+</div>
+</body>
+
+</html>
