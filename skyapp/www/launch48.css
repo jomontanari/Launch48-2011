@@ -27,7 +27,7 @@ font-family:'Permanent Marker', arial, serif;
 color:#000;
 float:left;
 position:relative;
-width:320pt;
+width:320px;
 padding:10px;
 }
 
@@ -81,9 +81,10 @@ display:none;
 .popup h2{
   font-size:30pt;
   height:400px;
-  line-height:280pt;
+  line-height:210pt;
   text-align:center;
-  width:450px;
+  width:320px;
+  margin-left:20px;
 }
 
 #close{
@@ -97,10 +98,6 @@ float:left;
 
 #icon{
   text-indent:-3000px;
-  background:url("images/emblem.png") no-repeat scroll 0 0;
   float:left;
-  width:50px;
-  height:50px;
-  margin:0 20pt;
 }
 

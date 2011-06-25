@@ -53,7 +53,10 @@ background: linear-gradient(top, #6d6d6d 0%,#494236 37%,#000000 84%); /* W3C */
  }
  
 .ui-header{
-height:50px;
+height:69px;
+width:320px;
+background:url("images/head.png") no-repeat scroll 0 0;
+margin:0 auto;
 }
 
 .ui-header h1{
