@@ -12,8 +12,14 @@
     <link rel="stylesheet" href="ui/jquery-ui-1.8.13.css"/>
     <link rel="stylesheet" href="jquery.mobile-1.0a4.min.css"/>
     <link rel="stylesheet" href="launch48.css"/>
-    <script type="text/javascript" src="ui/jquery.ui.map.js"></script>
+
+    <script src="http://www.google.com/jsapi?key=ABQIAAAAahcO7noe62FuOIQacCQQ7RTHkUDJMJAZieEeKAqNDtpKxMhoFxQsdtJdv3FJ1dT3WugUNJb7xD-jsQ" type="text/javascript"></script>
+    
+
+    <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="jquery-ui-1.8.13.min.js"></script>
+    <script type="text/javascript" src="ui/jquery.ui.map.js"></script>
+
     <style rel="stylesheet">
         body {
             background: #ddd;
@@ -44,7 +50,6 @@
             text-align: center;
         }
     </style>
-    <script src="http://www.google.com/jsapi?key=ABQIAAAAahcO7noe62FuOIQacCQQ7RTHkUDJMJAZieEeKAqNDtpKxMhoFxQsdtJdv3FJ1dT3WugUNJb7xD-jsQ" type="text/javascript"></script>
     <script type="text/javascript">
         google.load("maps", "3", {'other_params':'sensor=true'});
         google.load("jquery", "1.5");
@@ -129,6 +134,9 @@
                     map.panTo(marker.getPosition());
                });
             });
+            $("#close").click(function() {
+                $("#hit").removeClass("visible").addClass("hidden");
+            });
         }
 
         
@@ -141,13 +149,7 @@
 
             <h5>Hello World</h5>
 
-            <form>
-                <fieldset>
-                    <label class="hidden" for="">Close</label>
-                    <button type="submit">close</a>
-                </fieldset>
-            </form>
-
+            <a href="javascript:void(0)" id="close">Close</a>
     </div>
     </div>
     
