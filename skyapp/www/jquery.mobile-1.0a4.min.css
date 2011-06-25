@@ -52,9 +52,18 @@ background: linear-gradient(top, #6d6d6d 0%,#494236 37%,#000000 84%); /* W3C */
   border-radius:0;
  }
  
- .ui-icon{
-  
- }
+.ui-header{
+height:50px;
+}
+
+.ui-header h1{
+  line-height:25pt;
+}
+
+.ui-btn-active{
+  background:#ED1D24;
+  border:2px solid #000;
+}
  
  .ui-btn-text{
   visibility:hidden;
