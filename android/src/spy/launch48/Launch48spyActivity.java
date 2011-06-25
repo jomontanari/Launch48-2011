@@ -1,6 +1,5 @@
 package spy.launch48;
 
-import android.app.Activity;
 import android.os.Bundle;
 import com.phonegap.*;
 
