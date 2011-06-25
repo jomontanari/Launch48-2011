@@ -27,7 +27,7 @@ font-family:'Permanent Marker', arial, serif;
 color:#000;
 float:left;
 position:relative;
-width:320pt;
+width:320px;
 padding:10px;
 }
 
@@ -72,19 +72,24 @@ display:none;
 .popup {
   background: url("images/pow.png") no-repeat scroll 0 -9pt transparent;
   font-family: 'Permanent Marker',arial,serif;
-  left: 50pt;
-  padding: 80pt;
+  left: 0pt;
   position: absolute;
-  top: 100px;
+  top: 80px;
   z-index: 30;
 }
 
 .popup h2{
   font-size:30pt;
+  height:400px;
+  line-height:210pt;
+  text-align:center;
+  width:320px;
+  margin-left:20px;
 }
 
 #close{
-  margin-top:10pt;
+  position:absolute;
+  top:10px;
 }
 
 .weapon-select form .guns radio{
@@ -93,22 +98,6 @@ float:left;
 
 #icon{
   text-indent:-3000px;
-  background:url("images/emblem.png") no-repeat scroll 0 0;
   float:left;
-  width:50px;
-  height:50px;
-  margin:0 20pt;
 }
 
-.ui-header{
-height:50px;
-}
-
-.ui-header h1{
-  line-height:25pt;
-}
-
-.ui-btn-active{
-  background:#ED1D24;
-  border:2px solid #000;
-}
