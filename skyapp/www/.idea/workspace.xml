@@ -27,7 +27,16 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="74" selection-start="2486" selection-end="2486" vertical-scroll-proportion="0.3695921">
+            <state line="53" column="47" selection-start="1661" selection-end="1661" vertical-scroll-proportion="0.7564895">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../android/assets/www/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="40" selection-start="2052" selection-end="2052" vertical-scroll-proportion="-10.607843">
               <folding />
             </state>
           </provider>
@@ -36,7 +45,7 @@
       <file leaf-file-name="jquery.ui.map.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/jquery.ui.map.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="18" selection-start="2219" selection-end="2223" vertical-scroll-proportion="-13.769231">
+            <state line="148" column="51" selection-start="4506" selection-end="4524" vertical-scroll-proportion="-23.576923">
               <folding />
             </state>
           </provider>
@@ -66,6 +75,7 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/jquery.mobile-1.0a4.min.css" />
+        <option value="$PROJECT_DIR$/../../android/assets/www/index.html" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -233,14 +243,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ui/jquery.ui.map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="18" selection-start="2219" selection-end="2223" vertical-scroll-proportion="-13.769231">
+        <state line="148" column="51" selection-start="4506" selection-end="4524" vertical-scroll-proportion="-23.576923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../android/assets/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="40" selection-start="2052" selection-end="2052" vertical-scroll-proportion="-10.607843">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="74" selection-start="2486" selection-end="2486" vertical-scroll-proportion="0.3695921">
+        <state line="53" column="47" selection-start="1661" selection-end="1661" vertical-scroll-proportion="0.7564895">
           <folding />
         </state>
       </provider>

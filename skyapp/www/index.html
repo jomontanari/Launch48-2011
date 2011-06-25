@@ -29,6 +29,10 @@
             display: none;
         }
 
+        .visible {
+            display: block;
+        }
+
         h2 {
             font-size: 16px;
             overflow: hidden;
@@ -51,6 +55,7 @@
             $.mobile.ajaxEnabled = true;
         });
     </script>
+    <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="jquery.mobile-1.0a4.min.js"></script>
     <script type="text/javascript" src="ui/jquery.ui.map.js"></script>
 </head>
@@ -84,7 +89,7 @@
 
                         $('#map_canvas_2').gmap({ 'center': pos,'zoom': 14, 'streetViewControl': false, 'mapTypeControl': false, 'navigationControl': false, 'callback': function (map) {
                             $('#map_canvas_2').gmap('clearMarkers');
-                            $('#map_canvas_2').gmap('addMarker', { 'bound': true, 'position':new google.maps.LatLng(position.coords.latitude, position.coords.longitude) }, function(map, marker) {
+                            $('#map_canvas_2').gmap('addMarker', { 'bound': true, animation: google.maps.Animation.DROP, 'position':new google.maps.LatLng(position.coords.latitude, position.coords.longitude) }, function(map, marker) {
                                 $('#map_canvas_2').gmap('addInfoWindow', { 'position': marker.getPosition(), 'content': 'You are here!' }, function(iw) {
                                     $(marker).click(function() {
                                         iw.open(map, marker);
@@ -119,14 +124,12 @@
 
         function loadAgents(data) {
             $.each(data, function(key, value) {
-               $('#map_canvas_2').gmap('addMarker', { 'title': value.id, 'bound': true, 'position':new google.maps.LatLng(value.position.lat, value.position.lng) }, function(map, marker) {
-                $('#map_canvas_2').gmap('addInfoWindow', { 'position': marker.getPosition(), 'content': 'This is ' + value.id }, function(iw) {
+               $('#map_canvas_2').gmap('addMarker', { 'title': value.id, 'bound': true, animation: google.maps.Animation.DROP, 'position':new google.maps.LatLng(value.position.lat, value.position.lng) }, function(map, marker) {
                     $(marker).click(function() {
-                        iw.open(map, marker);
+                        $('#hit').addClass("visible");
                     });
-                });
-                map.panTo(marker.getPosition());
-            });
+                    map.panTo(marker.getPosition());
+               });
             });
         }
 
@@ -136,6 +139,18 @@
 
             <div id="map_canvas_2" style="height:450px;"></div>
 
+        <div class="hidden popup" id="hit">
+
+            <h5>Hello World</h5>
+
+            <form>
+                <fieldset>
+                    <label class="hidden" for="">Close</label>
+                    <button type="submit">close</a>
+                </fieldset>
+            </form>
+
+    </div>
     </div>
     
     <div class="">
