@@ -107,6 +107,7 @@ function hit() {
         $("#miss").removeClass("hidden").addClass("visible");
     }
     currentTargetArea.setMap(null);
+    weaponPrimed = false;
 }
 
 function loadAgents(data) {
@@ -178,5 +179,12 @@ $(document).ready(function() {
     });
     $("#login_button").live("click", function() {
         loginOrCreateAgent();
+    });
+
+    $("#attack_button").live("tap", function() {
+        hit();
+    });
+    $("#attack_button").live("click", function() {
+        hit();
     });
 });

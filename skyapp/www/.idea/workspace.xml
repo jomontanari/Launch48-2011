@@ -33,10 +33,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="142" column="82" selection-start="4058" selection-end="4058" vertical-scroll-proportion="0.65525985">
+            <state line="144" column="58" selection-start="4107" selection-end="4120" vertical-scroll-proportion="-5.1372547">
               <folding />
             </state>
           </provider>
@@ -69,16 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="espionage.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="espionage.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/espionage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="32" selection-start="4185" selection-end="4185" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1309096580000" expanded="true" signature="3554:4310" placeholder="{...}" />
-                <marker date="1309096580000" expanded="true" signature="3624:4300" placeholder="{...}" />
-                <marker date="1309096580000" expanded="true" signature="4102:4284" placeholder="{...}" />
-                <marker date="1309096580000" expanded="true" signature="4151:4218" placeholder="{...}" />
-              </folding>
+            <state line="109" column="24" selection-start="3392" selection-end="3392" vertical-scroll-proportion="0.51428574">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -131,8 +126,8 @@
         <option value="$PROJECT_DIR$/maps.google.polygon.containsLatLng.js" />
         <option value="$PROJECT_DIR$/serverjs.js" />
         <option value="$PROJECT_DIR$/temp.html" />
-        <option value="$PROJECT_DIR$/espionage.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/espionage.js" />
       </list>
     </option>
   </component>
@@ -177,6 +172,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -348,6 +357,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="144" column="58" selection-start="4107" selection-end="4120" vertical-scroll-proportion="-5.1372547">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/temp.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="7" selection-start="774" selection-end="774" vertical-scroll-proportion="-19.72">
@@ -357,19 +373,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/espionage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="32" selection-start="4185" selection-end="4185" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1309096580000" expanded="true" signature="3554:4310" placeholder="{...}" />
-            <marker date="1309096580000" expanded="true" signature="3624:4300" placeholder="{...}" />
-            <marker date="1309096580000" expanded="true" signature="4102:4284" placeholder="{...}" />
-            <marker date="1309096580000" expanded="true" signature="4151:4218" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="82" selection-start="4058" selection-end="4058" vertical-scroll-proportion="0.65525985">
+        <state line="109" column="24" selection-start="3392" selection-end="3392" vertical-scroll-proportion="0.51428574">
           <folding />
         </state>
       </provider>
