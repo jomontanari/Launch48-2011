@@ -12,6 +12,7 @@ function loadMap() {
         if (navigator.geolocation) {
             watch = navigator.geolocation.getCurrentPosition(
                 function(position) {
+                    uploadMyPosition(position);
                     myPosition = getLatLng(position);
 
                     $('#map_canvas_2').gmap({ 'center': myPosition,'zoom': 14, 'streetViewControl': false, 'mapTypeControl': false, 'navigationControl': false, 'callback': function (map) {
@@ -22,22 +23,29 @@ function loadMap() {
                             getAgentLocations();
                         });
                     }
-                    });
-                }
-            );
 
+                    });
+                });
             mapLoaded = true;
         }
 
     }
 }
 
+function uploadMyPosition(position) {
+    positionText = "lat:" + position.coords.latitude + ",lng:" + position.coords.longitude;
+    $.ajax({
+        url: "http://espionage.heroku.com/agents/" + agent_id,
+        type: "POST",
+        data: "_method=put&agent[position]=" + positionText
+    });
+}
+
 function getAgentLocations() {
     $.ajax({
-        url: "http://scubaholic.co.uk/agents.php?callback=?",
+        url: "http://espionage.heroku.com/agents?callback=?",
         dataType: 'json',
-        success: loadAgents,
-        error: function() {alert("Error")}
+        success: loadAgents
     });
 }
 
@@ -63,9 +71,8 @@ function drawTargetArea(bearing1, bearing2) {
 
 function rotateTargetArea(bearing) {
     if (bearing < 360) {
-        console.log(bearing);
-        drawTargetArea(bearing, bearing+30);
-        currentTimeout = setTimeout('rotateTargetArea(' + (bearing+5) + ')', 50);
+        drawTargetArea(bearing, bearing + 30);
+        currentTimeout = setTimeout('rotateTargetArea(' + (bearing + 5) + ')', 50);
     } else {
         setTimeout('currentTargetArea.setMap(null)')
         weaponPrimed = false;
@@ -90,13 +97,17 @@ function hit(marker) {
 
 function loadAgents(data) {
     $.each(data, function(key, value) {
-        var icon = (value.status === "friend") ? "friend" : "enemy";
-       $('#map_canvas_2').gmap('addMarker', { 'title': value.id, 'bound': true, icon: 'images/' + icon + '.png', 'position':new google.maps.LatLng(value.position.lat, value.position.lng) }, function(map, marker) {
-            $(marker).click(function() {
-                aimAndFire(marker);
+        if (value.agent.position && value.agent.id != agent_id) {
+            var coords = value.agent.position.split(',');
+            var latStrings = coords[0].split(":");
+            var lngStrings = coords[1].split(":");
+            var icon = (value.status && value.status === "friend") ? "friend" : "enemy";
+            $('#map_canvas_2').gmap('addMarker', { 'title': value.id, 'bound': true, icon: 'images/' + icon + '.png', 'position':new google.maps.LatLng(latStrings[1], lngStrings[1]) }, function(map, marker) {
+                $(marker).click(function() {
+                    aimAndFire(marker);
+                });
             });
-            map.panTo(marker.getPosition());
-       });
+        }
     });
     $("#close").click(function() {
         $("#hit").removeClass("visible").addClass("hidden");
@@ -122,7 +133,7 @@ function loginOrCreateAgent() {
     $.ajax({
         url: "http://espionage.heroku.com/agents",
         type: "POST",
-        data: "agent[code_name]=" + agentCodeName,
+        data: "agent[code_name]=" + agentCodeName
     });
     $.getJSON("http://espionage.heroku.com/agents/find?code_name=" + agentCodeName + "&callback=?", function(data) {
         $.each(data, function(key, value) {
@@ -133,7 +144,10 @@ function loginOrCreateAgent() {
 }
 
 $(document).ready(function() {
-    $("#login_button").click(function() {
+    $("#login_button").live("tap", function() {
+        loginOrCreateAgent();
+    });
+    $("#login_button").live("click", function() {
         loginOrCreateAgent();
     });
 });
