@@ -69,6 +69,12 @@
             visibility: visible;
             font-family: 'Permanent Marker',arial,serif;
         }
+
+        .attack-button {
+            float:left;
+            position:absolute;
+            z-index:900;
+        }
     </style>
     <script type="text/javascript">
         google.load("maps", "3", {'other_params':'sensor=true'});
@@ -89,7 +95,7 @@
 
 <body>
 
-<div data-role="page" id="login">
+<div data-role="page" id="login" data-transition="slide">
 
     <form>
         <label class="hidden" for="agent_code_name">Enter your code name:</label><br /><input id="agent_code_name" type="text" name="agent_code_name" placeholder="Codename"><br />
@@ -99,7 +105,7 @@
 
 </div>
 
-<div id="streetmap" data-role="page">
+<div id="streetmap" data-role="page" data-transition="slide">
 
     <div class="street-header">
 
@@ -110,7 +116,9 @@
     <script type="text/javascript">
 
     $('#streetmap').live("pageshow", function() {
-        loadMap();
+        if (checkForAgentID()) {
+            loadMap();
+        }
     });
 
     </script>
@@ -138,19 +146,26 @@
 
     <div class="weapon-select">
 
+        <div class="attack-button hidden">
+
+            <a href="javascript:void(0)" id="attack_button"><img src="images/attackbutton.png"></a>
+
+        </div>
+
         <form>
             <fieldset>
                 <div id="radio" class="guns">
-                    
-                        <input type="radio" id="radio1" name="radio" checked="checked" /><label for="radio1">Gun 1</label>
-                        <input type="radio" id="radio2" name="radio" /><label for="radio2">Gun 2</label>
-                        <input type="radio" id="radio3" name="radio" /><label for="radio3">Gun 3</label>
-                        <input type="radio" id="radio4" name="radio" /><label for="radio4">Gun 4</label>
+
+                    <input type="radio" id="radio1" name="radio" checked="checked" /><label for="radio1">Gun 1</label>
+                    <input type="radio" id="radio2" name="radio" /><label for="radio2">Gun 2</label>
+                    <input type="radio" id="radio3" name="radio" /><label for="radio3">Gun 3</label>
+                    <input type="radio" id="radio4" name="radio" /><label for="radio4">Gun 4</label>
                 </div>
             </fieldset>
         </form>
 
     </div>
+
 
 </div>
 

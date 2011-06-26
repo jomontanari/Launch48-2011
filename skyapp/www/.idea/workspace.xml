@@ -27,16 +27,16 @@
       <file leaf-file-name="temp.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/temp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="28" selection-start="515" selection-end="515" vertical-scroll-proportion="-7.48">
+            <state line="29" column="7" selection-start="774" selection-end="774" vertical-scroll-proportion="-19.72">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="133" column="0" selection-start="3824" selection-end="3825" vertical-scroll-proportion="0.5475285">
+            <state line="148" column="40" selection-start="4132" selection-end="4132" vertical-scroll-proportion="-4.470588">
               <folding />
             </state>
           </provider>
@@ -54,7 +54,7 @@
       <file leaf-file-name="launch48.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/launch48.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="0" selection-start="2181" selection-end="2225" vertical-scroll-proportion="-20.115385">
+            <state line="160" column="0" selection-start="2567" selection-end="2611" vertical-scroll-proportion="-20.115385">
               <folding />
             </state>
           </provider>
@@ -69,10 +69,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="espionage.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="espionage.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/espionage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="16" selection-start="3023" selection-end="3023" vertical-scroll-proportion="0.0">
+            <state line="90" column="24" selection-start="2959" selection-end="2959" vertical-scroll-proportion="0.29166666">
               <folding />
             </state>
           </provider>
@@ -126,8 +126,8 @@
         <option value="$PROJECT_DIR$/maps.google.polygon.containsLatLng.js" />
         <option value="$PROJECT_DIR$/serverjs.js" />
         <option value="$PROJECT_DIR$/temp.html" />
-        <option value="$PROJECT_DIR$/espionage.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/espionage.js" />
       </list>
     </option>
   </component>
@@ -172,6 +172,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -322,16 +336,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/temp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="28" selection-start="515" selection-end="515" vertical-scroll-proportion="-7.48">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/launch48.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="0" selection-start="2181" selection-end="2225" vertical-scroll-proportion="-20.115385">
+        <state line="160" column="0" selection-start="2567" selection-end="2611" vertical-scroll-proportion="-20.115385">
           <folding />
         </state>
       </provider>
@@ -339,13 +346,6 @@
     <entry file="file://$PROJECT_DIR$/jquery.mobile-1.0a4.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="29538" selection-start="29902" selection-end="29913" vertical-scroll-proportion="-9.807693">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/espionage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="16" selection-start="3023" selection-end="3023" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -359,7 +359,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="0" selection-start="3824" selection-end="3825" vertical-scroll-proportion="0.5475285">
+        <state line="148" column="40" selection-start="4132" selection-end="4132" vertical-scroll-proportion="-4.470588">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/temp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="7" selection-start="774" selection-end="774" vertical-scroll-proportion="-19.72">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/espionage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="24" selection-start="2959" selection-end="2959" vertical-scroll-proportion="0.29166666">
           <folding />
         </state>
       </provider>
