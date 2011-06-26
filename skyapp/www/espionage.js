@@ -214,12 +214,8 @@ $(document).ready(function() {
         hit();
     });
     $("#reset_button").live("click", function() {
-        alert("test")
-        loadMap();
+        mainMap.setCenter(myPosition);
     });
-    $("#reset_button").live("tap", loadMap);
-
-
     $("#set_handgun").click(function() {
         current_weapon = weapons.gun;
         removeBloodSplat();
