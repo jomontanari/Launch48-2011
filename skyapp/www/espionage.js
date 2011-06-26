@@ -10,7 +10,7 @@ var all_markers = [];
 
 var weapons = {
     knife : {
-        angle : 135,
+        angle : 110,
         range : 0.3
     },
     rifle : {
@@ -106,7 +106,7 @@ function rotateTargetArea(bearing, angle, dist) {
     if (angle == null) angle = 30;
     if (bearing >= 360) bearing = 0;
     drawTargetArea(bearing, bearing + angle, dist);
-    currentTimeout = setTimeout('rotateTargetArea(' + (bearing + 5) + ', ' + angle + ')', 50);
+    currentTimeout = setTimeout('rotateTargetArea(' + (bearing + 5) + ', ' + angle + ', ' + dist + ')', 50);
 }
 
 function primeWeapon(marker) {
@@ -118,7 +118,6 @@ function primeWeapon(marker) {
 function hit() {
     clearTimeout(currentTimeout);
     var hits = [];
-    console.log(all_markers);
     for(var i=0;i<all_markers.length;i++) {
         var marker = all_markers[i];
         if (currentTargetArea.containsLatLng(marker.position)) {
@@ -223,19 +222,30 @@ $(document).ready(function() {
 
     $("#set_handgun").click(function() {
         current_weapon = weapons.gun;
-        alert("Now using the handgun");
+        removeBloodSplat();
+        $("#set_handgun").addClass("bloodsplat");
     });
     $("#set_knife").click(function() {
         current_weapon = weapons.knife;
-        alert("Now using the knife");
+        removeBloodSplat();
+        $("#set_knife").addClass("bloodsplat");
     });
     $("#set_ak47").click(function() {
         current_weapon = weapons.rifle;
-        alert("Now using the rifle");
+        removeBloodSplat();
+        $("#set_ak47").addClass("bloodsplat");
 
     });
     $("#set_grenade").click(function() {
         current_weapon = weapons.grenade;
-        alert("Now using the grenade");
+        removeBloodSplat();
+        $("#set_grenade").addClass("bloodsplat");
     });
 });
+
+function removeBloodSplat() {
+    $("#set_handgun").removeClass("bloodsplat");
+    $("#set_knife").removeClass("bloodsplat");
+    $("#set_ak47").removeClass("bloodsplat");
+    $("#set_grenade").removeClass("bloodsplat");
+}
