@@ -27,7 +27,7 @@
       <file leaf-file-name="temp.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/temp.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="28" selection-start="515" selection-end="515" vertical-scroll-proportion="-7.48">
+            <state line="29" column="7" selection-start="774" selection-end="774" vertical-scroll-proportion="-19.72">
               <folding />
             </state>
           </provider>
@@ -36,7 +36,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="133" column="0" selection-start="3824" selection-end="3825" vertical-scroll-proportion="0.5475285">
+            <state line="114" column="9" selection-start="3412" selection-end="3469" vertical-scroll-proportion="-0.1634981">
               <folding />
             </state>
           </provider>
@@ -72,7 +72,7 @@
       <file leaf-file-name="espionage.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/espionage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="16" selection-start="3023" selection-end="3023" vertical-scroll-proportion="0.0">
+            <state line="119" column="32" selection-start="3830" selection-end="3830" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -126,8 +126,8 @@
         <option value="$PROJECT_DIR$/maps.google.polygon.containsLatLng.js" />
         <option value="$PROJECT_DIR$/serverjs.js" />
         <option value="$PROJECT_DIR$/temp.html" />
-        <option value="$PROJECT_DIR$/espionage.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/espionage.js" />
       </list>
     </option>
   </component>
@@ -322,13 +322,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/temp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="28" selection-start="515" selection-end="515" vertical-scroll-proportion="-7.48">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/launch48.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="135" column="0" selection-start="2181" selection-end="2225" vertical-scroll-proportion="-20.115385">
@@ -343,13 +336,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/espionage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="16" selection-start="3023" selection-end="3023" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/webide.jar!/standardSchemas/html5/xhtml5.xsd">
       <provider selected="true" editor-type-id="text-editor">
         <state line="854" column="6" selection-start="29373" selection-end="29373" vertical-scroll-proportion="0.677381">
@@ -357,9 +343,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/temp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="7" selection-start="774" selection-end="774" vertical-scroll-proportion="-19.72">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/espionage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="32" selection-start="3830" selection-end="3830" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="0" selection-start="3824" selection-end="3825" vertical-scroll-proportion="0.5475285">
+        <state line="114" column="9" selection-start="3412" selection-end="3469" vertical-scroll-proportion="-0.1634981">
           <folding />
         </state>
       </provider>

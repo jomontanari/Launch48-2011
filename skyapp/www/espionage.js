@@ -5,7 +5,8 @@ var currentTargetArea = null;
 var currentTimeout = null;
 var weaponPrimed = false;
 var agent_code_name = null;
-var agent_id = null
+var agent_id = null;
+var all_markers = [];
 
 function loadMap() {
     if (!mapLoaded) {
@@ -29,6 +30,15 @@ function loadMap() {
             mapLoaded = true;
         }
 
+    }
+}
+
+function checkForAgentID() {
+    if (agent_id == null) {
+        $.mobile.changePage("login")
+        return false;
+    } else {
+        return true;
     }
 }
 
@@ -70,13 +80,9 @@ function drawTargetArea(bearing1, bearing2) {
 }
 
 function rotateTargetArea(bearing) {
-    if (bearing < 360) {
-        drawTargetArea(bearing, bearing + 30);
-        currentTimeout = setTimeout('rotateTargetArea(' + (bearing + 5) + ')', 50);
-    } else {
-        setTimeout('currentTargetArea.setMap(null)')
-        weaponPrimed = false;
-    }
+    if (bearing >= 360) bearing = 0;
+    drawTargetArea(bearing, bearing + 30);
+    currentTimeout = setTimeout('rotateTargetArea(' + (bearing + 5) + ')', 50);
 }
 
 function primeWeapon(marker) {
@@ -84,9 +90,17 @@ function primeWeapon(marker) {
     rotateTargetArea(0)
 }
 
-function hit(marker) {
+function hit() {
     clearTimeout(currentTimeout);
-    if (currentTargetArea.containsLatLng(marker.position)) {
+    var hits = [];
+    for(var i=0;i<all_markers.length;i++) {
+        var marker = all_markers[i];
+        if (currentTargetArea.containsLatLng(marker.position)) {
+            hits.push[marker];
+        }
+    }
+
+    if (hits.length > 0) {
         $("#hit").removeClass("hidden").addClass("visible");
     }
     else {
@@ -96,17 +110,21 @@ function hit(marker) {
 }
 
 function loadAgents(data) {
+    all_markers = [];
     $.each(data, function(key, value) {
-        if (value.agent.position && value.agent.id != agent_id) {
-            var coords = value.agent.position.split(',');
-            var latStrings = coords[0].split(":");
-            var lngStrings = coords[1].split(":");
-            var icon = (value.status && value.status === "friend") ? "friend" : "enemy";
-            $('#map_canvas_2').gmap('addMarker', { 'title': value.id, 'bound': true, icon: 'images/' + icon + '.png', 'position':new google.maps.LatLng(latStrings[1], lngStrings[1]) }, function(map, marker) {
-                $(marker).click(function() {
-                    aimAndFire(marker);
+        if (value.agent.updated_at && isUpdatedWithinLastTenMinutes(value.agent.updated_at)) {
+            if (value.agent.position && value.agent.id != agent_id) {
+                var coords = value.agent.position.split(',');
+                var latStrings = coords[0].split(":");
+                var lngStrings = coords[1].split(":");
+                var icon = (value.status && value.status === "friend") ? "friend" : "enemy";
+                $('#map_canvas_2').gmap('addMarker', { 'title': value.id, 'bound': true, icon: 'images/' + icon + '.png', 'position':new google.maps.LatLng(latStrings[1], lngStrings[1]) }, function(map, marker) {
+                    $(marker).click(function() {
+                        aimAndFire(marker);
+                    });
+                    all_markers.push(marker);
                 });
-            });
+            }
         }
     });
     $("#close").click(function() {
@@ -114,13 +132,21 @@ function loadAgents(data) {
     });
 }
 
+function isUpdatedWithinLastTenMinutes(lastUpdatedDateString) {
+    var endDate = new Date();
+    var startDate = new Date(lastUpdatedDateString);
+    var difference = (endDate - startDate);
+    if (difference > 4200000) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
 function aimAndFire(marker) {
     if (!weaponPrimed) {
         primeWeapon(marker);
         weaponPrimed = true;
-    } else {
-        hit(marker);
-        weaponPrimed = false;
     }
 }
 
