@@ -33,10 +33,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="148" column="40" selection-start="4132" selection-end="4132" vertical-scroll-proportion="-4.470588">
+            <state line="111" column="11" selection-start="3407" selection-end="3407" vertical-scroll-proportion="0.63371354">
               <folding />
             </state>
           </provider>
@@ -54,7 +54,7 @@
       <file leaf-file-name="launch48.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/launch48.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="160" column="0" selection-start="2567" selection-end="2611" vertical-scroll-proportion="-20.115385">
+            <state line="159" column="0" selection-start="2564" selection-end="2608" vertical-scroll-proportion="-20.115385">
               <folding />
             </state>
           </provider>
@@ -69,10 +69,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="espionage.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="espionage.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/espionage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="24" selection-start="2959" selection-end="2959" vertical-scroll-proportion="0.29166666">
+            <state line="114" column="38" selection-start="3393" selection-end="3393" vertical-scroll-proportion="-71.88461">
               <folding />
             </state>
           </provider>
@@ -90,7 +90,7 @@
       <file leaf-file-name="poscalculation.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/poscalculation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="22" selection-start="1144" selection-end="1144" vertical-scroll-proportion="0.0">
+            <state line="33" column="22" selection-start="1193" selection-end="1193" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -122,11 +122,11 @@
         <option value="$PROJECT_DIR$/jquery.mobile-1.0a4.min.css" />
         <option value="$PROJECT_DIR$/../../android/assets/www/index.html" />
         <option value="$PROJECT_DIR$/circlecalculation.html" />
-        <option value="$PROJECT_DIR$/poscalculation.js" />
         <option value="$PROJECT_DIR$/maps.google.polygon.containsLatLng.js" />
         <option value="$PROJECT_DIR$/serverjs.js" />
         <option value="$PROJECT_DIR$/temp.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/poscalculation.js" />
         <option value="$PROJECT_DIR$/espionage.js" />
       </list>
     </option>
@@ -312,11 +312,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/poscalculation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="22" selection-start="1144" selection-end="1144" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ui/jquery.ui.map.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="143" column="83" selection-start="4285" selection-end="4285" vertical-scroll-proportion="0.0" />
@@ -338,7 +333,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/launch48.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="0" selection-start="2567" selection-end="2611" vertical-scroll-proportion="-20.115385">
+        <state line="159" column="0" selection-start="2564" selection-end="2608" vertical-scroll-proportion="-20.115385">
           <folding />
         </state>
       </provider>
@@ -357,13 +352,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="40" selection-start="4132" selection-end="4132" vertical-scroll-proportion="-4.470588">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/temp.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="7" selection-start="774" selection-end="774" vertical-scroll-proportion="-19.72">
@@ -371,9 +359,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/poscalculation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="22" selection-start="1193" selection-end="1193" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/espionage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="24" selection-start="2959" selection-end="2959" vertical-scroll-proportion="0.29166666">
+        <state line="114" column="38" selection-start="3393" selection-end="3393" vertical-scroll-proportion="-71.88461">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="11" selection-start="3407" selection-end="3407" vertical-scroll-proportion="0.63371354">
           <folding />
         </state>
       </provider>
