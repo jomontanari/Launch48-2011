@@ -112,6 +112,9 @@ function loadAgents(data) {
     $("#close").click(function() {
         $("#hit").removeClass("visible").addClass("hidden");
     });
+    $("#closemiss").click(function() {
+        $("#miss").removeClass("visible").addClass("hidden");
+    });
 }
 
 function aimAndFire(marker) {
