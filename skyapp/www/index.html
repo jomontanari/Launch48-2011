@@ -66,7 +66,7 @@
     <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="jquery.mobile-1.0a4.min.js"></script>
     <script type="text/javascript" src="ui/jquery.ui.map.js"></script>
-    
+    <script type="text/javascript" src="maps.google.polygon.containsLatLng.js"></script>
 
 </head>
 
@@ -75,7 +75,9 @@
 <div id="gmap-4" class="" data-role="page">
 
     <div data-role="header">
-        <h1 id="icon">E</h1>
+
+        <h1>Targets Near You!</h1>
+
     </div>
 
     <script type="text/javascript">
@@ -83,6 +85,9 @@
         var mapLoaded = false;
         var myPosition = null;
         var mainMap = null;
+        var currentTargetArea = null;
+        var currentTimeout = null;
+        var weaponPrimed = false;
 
          function getAgentLocations() {
             $.ajax({
@@ -93,16 +98,20 @@
             });
         }
 
-        function drawTargetArea() {
-            console.log(myPosition);
-            var pos1 = getNextLatLon(myPosition.lat(), myPosition.lng(), 0);
-            var pos2 = getNextLatLon(myPosition.lat(), myPosition.lng(), 30);
+        //var coordinate = new GLatLng(40, -90);
+        //var polygon = new GPolygon([], "#000000", 1, 1, "#336699", 0.3);
+        //var isWithinPolygon = polygon.containsLatLng(coordinate);
+
+        function drawTargetArea(bearing1, bearing2) {
+            if (currentTargetArea) currentTargetArea.setMap(null);
+            var pos1 = getNextLatLon(myPosition.lat(), myPosition.lng(), bearing1);
+            var pos2 = getNextLatLon(myPosition.lat(), myPosition.lng(), bearing2);
             var triangleCoords = [
                 myPosition,
                 new google.maps.LatLng(pos1.latitude, pos1.longitude),
                 new google.maps.LatLng(pos2.latitude, pos2.longitude)
             ];
-            targetArea = new google.maps.Polygon({
+            currentTargetArea = new google.maps.Polygon({
                 paths: triangleCoords,
                 strokeColor: "#FF0000",
                 strokeOpacity: 0.8,
@@ -110,8 +119,18 @@
                 fillColor: "#FF0000",
                 fillOpacity: 0.35
             });
-            targetArea.setMap(mainMap);
+            currentTargetArea.setMap(mainMap);
+        }
 
+        function rotateTargetArea(bearing) {
+            if (bearing < 360) {
+                console.log(bearing);
+                drawTargetArea(bearing, bearing+30);
+                currentTimeout = setTimeout('rotateTargetArea(' + (bearing+5) + ')', 50);
+            } else {
+                setTimeout('currentTargetArea.setMap(null)')
+                weaponPrimed = false;
+            }
         }
 
         $('#gmap-4').live("pageshow", function() {
@@ -155,14 +174,38 @@
             var watch;
         });
 
+        function primeWeapon(marker) {
+            clearTimeout(currentTimeout);
+            rotateTargetArea(0)
+        }
+
+        function hit(marker) {
+            clearTimeout(currentTimeout);
+            if (currentTargetArea.containsLatLng(marker.position)) {
+                $("#hit").removeClass("hidden").addClass("visible");
+            }
+            else {
+                alert("miss");                
+            }
+            currentTargetArea.setMap(null);
+        }
+
+        function aimAndFire(marker) {
+            if (!weaponPrimed) {
+                primeWeapon(marker);
+                weaponPrimed = true;
+            } else {
+                hit(marker);
+                weaponPrimed = false;
+            }
+        }
 
         function loadAgents(data) {
             $.each(data, function(key, value) {
                 var icon = (value.status === "friend") ? "friend" : "enemy";
                $('#map_canvas_2').gmap('addMarker', { 'title': value.id, 'bound': true, icon: 'images/' + icon + '.png', 'position':new google.maps.LatLng(value.position.lat, value.position.lng) }, function(map, marker) {
                     $(marker).click(function() {
-                        drawTargetArea();
-                        //$("#hit").removeClass("hidden").addClass("visible");
+                        aimAndFire(marker);
                     });
                     map.panTo(marker.getPosition());
                });
