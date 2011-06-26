@@ -69,6 +69,12 @@
             visibility: visible;
             font-family: 'Permanent Marker',arial,serif;
         }
+
+        .attack-button {
+            float:left;
+            position:absolute;
+            z-index:900;
+        }
     </style>
     <script type="text/javascript">
         google.load("maps", "3", {'other_params':'sensor=true'});
@@ -140,7 +146,7 @@
 
     <div class="weapon-select">
 
-        <div class="attack-button" style="float:left;position:absolute;z-index:900">
+        <div class="attack-button hidden">
 
             <a href="javascript:void(0)" id="attack_button"><img src="images/attackbutton.png"></a>
 

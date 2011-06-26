@@ -87,16 +87,18 @@ function rotateTargetArea(bearing) {
 
 function primeWeapon(marker) {
     clearTimeout(currentTimeout);
+    $(".attack-button").removeClass("hidden").addClass("visible");
     rotateTargetArea(0)
 }
 
 function hit() {
     clearTimeout(currentTimeout);
     var hits = [];
+    console.log(all_markers);
     for(var i=0;i<all_markers.length;i++) {
         var marker = all_markers[i];
         if (currentTargetArea.containsLatLng(marker.position)) {
-            hits.push[marker];
+            hits.push(marker);
         }
     }
 
@@ -108,6 +110,7 @@ function hit() {
     }
     currentTargetArea.setMap(null);
     weaponPrimed = false;
+    $(".attack-button").removeClass("hidden").addClass("visible");    
 }
 
 function loadAgents(data) {
