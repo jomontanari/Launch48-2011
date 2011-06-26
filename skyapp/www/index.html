@@ -59,6 +59,14 @@
             margin: 0 auto;
             width: 100%;
         }
+        
+        #map{
+            height:320px;
+        }
+
+        .ui-btn-text {
+            visibility: visible;
+        }
     </style>
     <script type="text/javascript">
         google.load("maps", "3", {'other_params':'sensor=true'});
@@ -81,10 +89,13 @@
 
 <div data-role="page" id="login">
 
-        Enter your code name:<br /><input id="agent_code_name" type="text" name="agent_code_name"><br />
-        <a data-role="button" id="login_button">Login</a>
+    <form>
+        <label class="hidden" for="agent_code_name">Enter your code name:</label><br /><input id="agent_code_name" type="text" name="agent_code_name" placeholder="Codename"><br />
+        <a data-role="button" id="login_button">GO!</a>
 
-    </div>
+    </form>
+
+</div>
 
 <div id="streetmap" data-role="page">
 
