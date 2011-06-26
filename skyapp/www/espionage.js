@@ -214,4 +214,28 @@ $(document).ready(function() {
     $("#attack_button").live("click", function() {
         hit();
     });
+    $("#reset_button").live("click", function() {
+        alert("test")
+        loadMap();
+    });
+    $("#reset_button").live("tap", loadMap);
+
+
+    $("#set_handgun").click(function() {
+        current_weapon = weapons.gun;
+        alert("Now using the handgun");
+    });
+    $("#set_knife").click(function() {
+        current_weapon = weapons.knife;
+        alert("Now using the knife");
+    });
+    $("#set_ak47").click(function() {
+        current_weapon = weapons.rifle;
+        alert("Now using the rifle");
+
+    });
+    $("#set_grenade").click(function() {
+        current_weapon = weapons.grenade;
+        alert("Now using the grenade");
+    });
 });

@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Spy App</title>
+    <title>ESPIONAGE!</title>
     <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
     <meta name="keywords" content="Google maps, jQuery, plugin, mobile, iphone, ipad, android, HTML5, Geo search"/>
     <meta name="description" content="Geo search example with jQuery mobile, Google maps and HTML5"/>
@@ -55,14 +55,19 @@
         }
 
         .street-header {
-            background: url("images/head.png") no-repeat scroll 0 0 transparent;
             height: 69px;
             margin: 0 auto;
             width: 100%;
         }
+
+        .street-header h1 a {
+            height: 69px;
+            margin: 0 auto;
+            width: 100%;   
+        }
         
         #map{
-            height:320px;
+            height:290px;
         }
 
         #login_button .ui-btn-text {
@@ -109,7 +114,7 @@
 
     <div class="street-header">
 
-        <h1>&nbsp;</h1>
+        <a id="reset_button"><img src="images/head.png"></a>
 
     </div>
 
@@ -152,17 +157,12 @@
 
         </div>
 
-        <form>
-            <fieldset>
-                <div id="radio" class="guns">
-
-                    <input type="radio" id="radio1" name="radio" value="gun" checked="checked" /><label for="radio1">Gun 1</label>
-                    <input type="radio" id="radio2" name="radio" value="rifle" /><label for="radio2">Gun 2</label>
-                    <input type="radio" id="radio3" name="radio" value="knife"/><label for="radio3">Gun 3</label>
-                    <input type="radio" id="radio4" name="radio" value="grenade"/><label for="radio4">Gun 4</label>
-                </div>
-            </fieldset>
-        </form>
+        <ul class="guns">
+            <li id="set_handgun"><img src="images/handgun.png"></li>
+            <li id="set_grenade"><img src="images/grenade.png"></li>
+            <li id="set_ak47"><img src="images/ak47.png"></li>
+            <li id="set_knife"><img src="images/drag.png"></li>
+        </ul>
 
     </div>
 
