@@ -88,7 +88,7 @@ function rotateTargetArea(bearing) {
 function primeWeapon(marker) {
     clearTimeout(currentTimeout);
     $(".attack-button").removeClass("hidden").addClass("visible");
-    rotateTargetArea(0)
+    rotateTargetArea(0);
 }
 
 function hit() {
