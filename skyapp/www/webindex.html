@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>ESPIONAGE!</title>
+    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+    <meta name="keywords" content="Google maps, jQuery, plugin, mobile, iphone, ipad, android, HTML5, Geo search"/>
+    <meta name="description" content="Geo search example with jQuery mobile, Google maps and HTML5"/>
+    <meta http-equiv="content-language" content="en"/>
+
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+
+
+    <link rel="stylesheet" href="jquery.mobile-1.0a4.min.css"/>
+    <link rel="stylesheet" href="ui/jquery-ui-1.8.13.css"/>
+    <link rel="stylesheet" href="launch48.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Permanent+Marker&v1' rel='stylesheet' type='text/css'>
+
+    <script src="http://www.google.com/jsapi?key=ABQIAAAAahcO7noe62FuOIQacCQQ7RTHkUDJMJAZieEeKAqNDtpKxMhoFxQsdtJdv3FJ1dT3WugUNJb7xD-jsQ" type="text/javascript"></script>
+
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-ui-1.8.13.min.js"></script>
+    <script type="text/javascript" src="ui/jquery.ui.map.js"></script>
+    <script type="text/javascript" src="poscalculation.js"></script>
+
+    <style rel="stylesheet">
+        body {
+            background: #000;
+            color:#fff;
+            font-family:'Permanent Marker', arial, serif;
+            width:100%;
+        }
+
+        .container{
+            background:url("images/webpagebackground.gif") no-repeat scroll 0 0;
+            width:900px;
+            margin:0 auto;
+            min-height:900px;
+        }
+
+        .header{
+            float:left;
+            min-height:80px;
+            width:100%;
+        }
+
+        .header h1{
+            text-indent:-3000px;
+            background:url("images/logo.png") no-repeat scroll 0 0;
+            width:185px;
+            height:102px;
+            display:block;
+            float:left;
+        }
+
+        .header h4{
+            background:#fff;
+            color:#000;
+            border:4px solid #000;
+            padding:6px 9px;
+            float:right;
+            font-size:28px;
+            margin:60px 10px 0 0;
+        }
+
+        .map-holder{
+            float:left;
+            width:100%;
+            padding:0 25px 25px;
+        }
+
+        .map {
+            background: none repeat scroll 0 0 #EFEFEF;
+            float: left;
+            min-height: 300px;
+            width: 860px;
+          }
+
+
+
+        .ui-body-c a.ui-link {
+            color: #008595;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .visible {
+            display: block;
+        }
+
+        h2 {
+            font-size: 16px;
+            overflow: hidden;
+            white-space: nowrap;
+            display: block;
+        }
+
+        .more {
+            text-align: center;
+        }
+
+        .street-header {
+            height: 69px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .street-header h1 a {
+            height: 69px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        #map{
+            height:290px;
+        }
+
+        #login_button .ui-btn-text {
+            visibility: visible;
+            font-family: 'Permanent Marker',arial,serif;
+        }
+
+        .attack-button {
+            float:left;
+            position:absolute;
+            z-index:900;
+        }
+
+        .bloodsplat {
+            background:url('images/splat.png') no-repeat scroll 0 0 #fff;
+        }
+    </style>
+    <script type="text/javascript">
+        google.load("maps", "3", {'other_params':'sensor=true'});
+        google.load("jquery", "1.5");
+
+        // Demonstration purpose only...
+        $(document).bind("mobileinit", function () {
+            $.mobile.ajaxEnabled = true;
+        });
+    </script>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.mobile-1.0a4.min.js"></script>
+    <script type="text/javascript" src="ui/jquery.ui.map.js"></script>
+    <script type="text/javascript" src="maps.google.polygon.containsLatLng.js"></script>
+    <script type="text/javascript" src="espionage.js"></script>
+
+</head>
+
+<body>
+
+<div data-role="page" id="login" data-transition="slide">
+
+    <form>
+        <label class="hidden" for="agent_code_name">Enter your code name:</label><br /><input id="agent_code_name" type="text" name="agent_code_name" placeholder="Codename"><br />
+        <a data-role="button" id="login_button">GO!</a>
+
+    </form>
+
+</div>
+
+<div id="streetmap" data-role="page" data-transition="slide" class="container">
+
+
+    <div class="header">
+        <a href="#"><h1>Espionage</h1></a>
+
+        <h4>Meanwhile</h4>
+    </div>
+
+    <script type="text/javascript">
+
+    $('#streetmap').live("pageshow", function() {
+        if (checkForAgentID()) {
+            loadMap();
+        }
+    });
+
+    </script>
+    <div class="page map-holder" data-role="content" id="map">
+
+        <div role="header" id="map_canvas_2" style="height:450px;"></div>
+
+        <div class="popup hidden" id="hit">
+
+            <h2>HIT!</h2>
+
+            <a href="javascript:void(0)" id="close">Close</a>
+        </div>
+
+        <div class="hidden" id="miss">
+
+            <h2>MISS!</h2>
+
+            <a href="javascript:void(0)" id="closemiss">Close</a>
+        </div>
+
+
+
+    </div>
+
+    <div class="weapon-select">
+
+        <div class="attack-button hidden">
+
+            <a href="javascript:void(0)" id="attack_button"><img src="images/attackbutton.png"></a>
+
+        </div>
+
+        <ul class="guns">
+            <li id="set_handgun" class="bloodsplat"><img src="images/handgun.png"></li>
+            <li id="set_grenade"><img src="images/grenade.png"></li>
+            <li id="set_ak47"><img src="images/ak47.png"></li>
+            <li id="set_knife"><img src="images/knife.png"></li>
+        </ul>
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>

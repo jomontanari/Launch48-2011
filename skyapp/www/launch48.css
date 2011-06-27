@@ -1,0 +1,176 @@
+/* SIMLPE CSS RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+font-size: 100%;
+vertical-align: baseline;
+background: transparent;
+}
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+
+body{
+font-family:'Permanent Marker', arial, serif;
+color:#000;
+float:left;
+position:relative;
+width:320px;
+height:450px;
+padding:0px;
+}
+
+#gmap-4{
+float:left;
+}
+
+.me, .agent {
+  left: 295px;
+  margin: auto;
+  position: absolute;
+  top: 160px;
+  width: 12px;
+  z-index: 29;
+}
+
+.agent{
+left:
+}
+
+.me a{
+padding:14px;
+display:block;
+background:#000;
+border-radius:30px;
+-moz-border-radius:30px;
+}
+
+.agent a{
+padding:14px;
+display:block;
+background:red;
+border-radius:30px;
+-moz-border-radius:30px;
+border: 1px solid #172867;
+}
+
+.hidden{
+display:none;
+}
+
+.popup {
+  background: url("images/pow.png") no-repeat scroll -3pt -15pt transparent;
+  font-family: 'Permanent Marker',arial,serif;
+  left: 0pt;
+  position: absolute;
+  top: 80px;
+  z-index: 30;
+}
+
+#miss{
+  background: url("images/miss.png") no-repeat scroll 50px 70px transparent;
+  font-family: 'Permanent Marker',arial,serif;
+  left: 0pt;
+  position: absolute;
+  top: 80px;
+  z-index: 30;
+}
+
+.popup h2{
+  font-size:30pt;
+  height:400px;
+  line-height:210pt;
+  text-align:center;
+  width:300px;
+  margin-left:20px;
+}
+
+#miss h2{
+  font-size:30pt;
+  height:400px;
+  line-height:210pt;
+  text-align:center;
+  width:300px;
+  margin-left:0px;
+}
+
+#close{
+  position:absolute;
+  top:176px;
+  right:97px;
+}
+
+#closemiss{
+  position:absolute;
+  top:206px;
+  left:170px;
+}
+
+.weapon-select form .guns radio{
+float:left;
+}
+
+.weapon-select .guns #radio2{
+  background:url("images/grenade.png") no-repeat scroll 0 0;
+}
+
+#icon{
+  text-indent:-3000px;
+  float:left;
+}
+
+#login{
+visibility:visible;
+width:320px;
+height:480px;
+margin:0;
+padding:0;
+font-family: 'Permanent Marker',arial,serif;
+background:url("images/signin-bg.jpg") no-repeat scroll 0 0;
+position:relative;
+}
+
+#login form{
+  float:left;
+  margin:230px 8px 0;
+}
+
+#login form label{
+  display:none;
+}
+
+#login form input{
+background:#fff;
+border:5px #000 solid;
+padding:8px 10px;
+width:274px;
+font-size:22px;
+font-family: 'Permanent Marker',arial,serif;
+}
+
+#login_button{
+background:#ff0000;
+color:#fff;
+font-size:24px;
+border:3px solid #000;
+padding:8px 15px;
+float:left;
+margin-top:10px;
+}
+
+ul.guns li {
+    float:left;
+    border: 2px #000 solid;
+}
